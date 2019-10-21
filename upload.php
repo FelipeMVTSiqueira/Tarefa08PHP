@@ -6,7 +6,7 @@
         $pastaTemporaria = $_FILES["enviado"]["tmp_name"];//localização temporária do arquivo = transformado em variável
         $existe=file_exists($pastaUploads); //
         if($existe){ //checar se já existe arquivo com esse nome 
-            echo "Este arquivo já foi adicionado.";
+            echo "Este arquivo já foi adicionado anteriormente.";
             }else{
                 if(move_uploaded_file($pastaTemporaria,$pastaUploads)) { //checar se o arquivo foi salvo na pasta [if $moving==true significa que o arquivo está lá]
                 //o move_uploaded_file pode ser transformado em variável também
