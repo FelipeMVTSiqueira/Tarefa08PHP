@@ -1,31 +1,23 @@
-
 <?php
-if($_POST){
-        $nome = $_FILES["enviar"]["name"];
-        $arquivoTemp = $_FILES["enviar"]["tmp_name"];
-        $caminho = "uploads/".$nome;
-        $movendo = move_uploaded_file($arquivoTemp, $caminho);
-        if($_FILES["enviar"]["error"] == UPLOAD_ERR_OK){
-            echo "Download feito com sucesso!";
-        }else {
-            echo "Um arquivo com esse nome já existe =/ Por favor tente um outro.";
-        }
-    }
-    //mostrando teste github
+    if($_FILES){
+        $nome = $_FILES["enviado"]["name"];//nome do arquivo que será enviado = transformado em variável
+        $pastaUploads = dirname(__FILE__)."/uploads/".$nome; //váriável com dirname(__FILE__)=pega o nome do diretório que o arquivo está
+        //entra no nome da pasta e depois entra o nome do arquivo[pra onde a foto vai?]
+        $pastaTemporaria = $_FILES["enviado"]["tmp_name"];//localização temporária do arquivo = transformado em variável
+        $existe=file_exists($pastaUploads); //
+        if($existe){ //checar se já existe arquivo com esse nome 
+            echo "Este arquivo já foi adicionado.";
+            }else{
+                if(move_uploaded_file($pastaTemporaria,$pastaUploads)) { //checar se o arquivo foi salvo na pasta [if $moving==true significa que o arquivo está lá]
+                //o move_uploaded_file pode ser transformado em variável também
+                    echo "Parabéns! Seu upload realizado com sucesso!";
+                    }else {
+                        echo "=/ Aconteceu algum erro, por favor tente de novo.";
+                        }
+                }
+        }   
 ?>
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>Document</title>
-        </head>
-        <body>
-        <form action="" method="post" enctype="multipart/form-data">
-            Selecione arquivo para upload: <br><br><input type="file" name="enviar">
-            <button type="submit">Enviar</button>
-        </form>
-        </body>
-        </html>
-        
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="file" name="enviado">
+    <button type="submit">Enviar</button>
+</form>
