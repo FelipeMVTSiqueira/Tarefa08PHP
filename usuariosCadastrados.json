@@ -1,8 +1,1 @@
-{"usuariosCadastrados": [
-    {"id": 1, "nomeUsuario": "Felipe", "foto": "uploads/felipe.jpg"},
-    {"id": 2, "nomeUsuario": "Gabriel", "foto": "uploads/gabriel.jpg"},
-    {"id": 3, "nomeUsuario": "Victoria", "foto": "uploads/vick.jpeg"},
-    {"id": 4, "nomeUsuario": "Luiz", "foto": "uploads/luiz.jpeg"},
-    {"id": 5, "nomeUsuario": "Maria", "foto": "uploads/maria.jpg"}
-    ]
-}
+[{"idUser":1,"nome":"Jose da Silva","email":"jose@exemplo.net","fone":"(11) 9 99999999","img":"foto\/07-12-19_00_02_14_enviar.jpg"}]
