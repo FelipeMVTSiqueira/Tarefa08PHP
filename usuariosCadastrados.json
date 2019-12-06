@@ -1,0 +1,8 @@
+{"usuariosCadastrados": [
+    {"id": 1, "nomeUsuario": "Felipe", "foto": "uploads/felipe.jpg"},
+    {"id": 2, "nomeUsuario": "Gabriel", "foto": "uploads/gabriel.jpg"},
+    {"id": 3, "nomeUsuario": "Victoria", "foto": "uploads/vick.jpeg"},
+    {"id": 4, "nomeUsuario": "Luiz", "foto": "uploads/luiz.jpeg"},
+    {"id": 5, "nomeUsuario": "Maria", "foto": "uploads/maria.jpg"}
+    ]
+}
