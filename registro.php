@@ -92,11 +92,11 @@
                                 <input type="text" name="emailUser" class="form-control" placeholder="jose@exemplo.net">
                             </div>
                             <div class="form-group">
-                                <label for="foneUser">Preço</label>
+                                <label for="foneUser">Telefone:</label>
                                 <input type="text" class="form-control" name="foneUser" placeholder="(DDD)99999-9999">
                             </div>
                             <div class="form-group">
-                                <label for="imgUser">Foto do perfil</label>
+                                <label for="imgUser">Foto do perfil:</label>
                                 <input type="file" class="form-control-file" name="imgUser" placeholder="Selecione uma foto de perfil" required/>
                             </div>
                             <div class="container">
